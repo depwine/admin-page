@@ -260,7 +260,27 @@ ul{
 }
 
 .article{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     border: 1px solid red;
+}
+
+.artHead, .artBody{
+    margin: 1vh 2vw 0 1vw;
+}
+
+.artIcons{
+    display: grid;
+    grid-template-columns: 1fr 25px 25px 25px;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.artIcons > :nth-child(1){
+    grid-column: 2/3;
 }
 
 .news{
