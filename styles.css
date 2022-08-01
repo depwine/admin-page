@@ -1,3 +1,15 @@
+:root{
+    --bg-color: rgb(121, 182, 218);
+    --bg-colorTwo: rgb(185, 243, 174);
+
+    --text-colorLight: rgb(255, 255, 255);
+    --text-colorDark: rgb(48, 48, 48);
+
+    --highlight-color: orange;
+
+    --shadow: rgba(97, 97, 97, 0.548);
+}
+
 body{
     margin:0;
 }
@@ -14,12 +26,12 @@ body{
 
 #sidebar, #header, #main{
     border: 1px solid blue;
-    background-color: rgb(220, 220, 255);
+    background-color: var(--bg-color)
 }
 
 .logo, .navOne, .navTwo{
     border: 1px solid green;
-    background-color: rgb(185, 243, 174);
+    background-color: var(--bg-colorTwo)
 }
 
 .logo{
@@ -35,6 +47,8 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 30vh 1fr;
+
+    z-index: 2;
 }
 
 #header{
@@ -44,15 +58,36 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 2fr;
+
+    z-index: 1;
+
+    box-shadow: 0 5px 10px var(--shadow);
 }
 
 #main{
     grid-column: 2/3;
     grid-row: 2/3;
+
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
 }
 
 li{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
     list-style: none;    
+    align-items: center;
+}
+
+.side-icon{
+    height: 25px;
+    width: 25px;
+}
+
+p{
+    margin: 0;
 }
 
 /* header TOP */
@@ -71,7 +106,7 @@ li{
     column-gap: 10px;
     margin: 3vh 2vw 0vh 5vw;
     align-items: center;  
-}
+} 
 
 .searchIcon{
     grid-column: 1/2;
@@ -117,32 +152,61 @@ li{
 /* header Bottom */
 .bottomHeader{
     display: grid;
-    grid-template-columns: 80px 30vw auto;
-    column-gap: 10px;
-    margin: 3vh 2vw 2vh 5vw;
+    grid-template-columns: 80px 1fr 340px;
+    margin: 2vh 2vw 2vh 5vw;
     align-items: center;  
 }
 
 .bottomHeader ul{
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1vw;
+    border: 2px solid rgba(255, 0, 0, 0.219);
+    margin: 0;
+    justify-items:end
 }
 
 .bottomHeader ul li{
     display: grid;
-    height: 30px;
-    width: 80px;
     align-items: center;
-    justify-content: center;
-    border: 2px solid red;
+    justify-content: end;
+}
+
+.bottomNavButtons{
+    grid-column: 3/4;
+}
+
+button{
+    height: 40px;
+    width: 100px;
     border-radius: 10px;
+    background-color: var(--bg-colorTwo);
+    color: var(--text-colorDark);    
 }
 
 .profileIconLarge{
     height: 80px;
     width: 80px;
 }
+
+.bottomHeaderText{
+    display: grid;
+    align-content: center;
+    grid-column: 2/3;
+}
+
+.greeting{
+    font-size: clamp(15px, 1.5vw, 22px);
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+.fullUsername{
+    font-size: clamp(20px, 1.5vw, 30px);    
+    font-weight: bold;
+    margin: 0;
+}
+
+
 
 /* sidebar */
 .icon{
@@ -153,7 +217,7 @@ li{
 }
 
 ul{
-    padding-inline-start: 0px;
+    padding-inline-start: 0px
 }
 
 .navOne ul li, .navTwo ul li{
@@ -170,4 +234,95 @@ ul{
 .navTwo ul li{
     margin: 1.5vh 0 1.5vh 1.5vw;
 }
+
+/* main */
+
+.leftContent{
+    border: 1px solid white;
+
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 1fr
+}
+
+.articles{
+    border: 1px solid rgb(189, 23, 23);
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 30px 30px;
+    margin: 0 0 50px 0;
+}
+
+.article{
+    border: 1px solid red;
+}
+
+.news{
+    border: 1px solid blue;
+    margin: 5px 3px 5px 3px;
+    padding: 0 0 5px 10px;
+}
+
+.rightContent{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.rightTop{
+    border: 1px solid rgb(196, 144, 49);
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.rightBottom{
+    border: 1px solid rgb(238, 255, 0);
+
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0 0 51px 0;
+
+}
+
+.announcements{
+    margin: 50px 0 0 0;
+    border: 1px solid white;
+}
+
+.trends{
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    margin: 10px 0 0 0;
+    row-gap: 2vh;
+
+    align-content: end;
+}
+
+.trend{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    align-items: center;
+
+    border: 1px solid black;
+    margin: 5px 15px 0 15px;  
+    padding: 0 10px 0 10px; 
+}
+
+.small-icon{
+    height: 15px;
+    width: 15px;
+}
+
+
 
