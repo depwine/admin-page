@@ -1,0 +1,173 @@
+body{
+    margin:0;
+}
+
+/* misc */
+#container{
+    border: 1px solid red;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+#sidebar, #header, #main{
+    border: 1px solid blue;
+    background-color: rgb(220, 220, 255);
+}
+
+.logo, .navOne, .navTwo{
+    border: 1px solid green;
+    background-color: rgb(185, 243, 174);
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sidebar{
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 30vh 1fr;
+}
+
+#header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr;
+}
+
+#main{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+li{
+    list-style: none;    
+}
+
+/* header TOP */
+
+.topHeader > *{
+    border: 1px solid rgb(26, 9, 105);
+}
+
+.bottomHeader{
+    border: 1px solid rgb(136, 114, 233);
+}
+
+.topHeader{
+    display: grid;
+    grid-template-columns: 40px 1fr 10vw 40px 40px 200px;
+    column-gap: 10px;
+    margin: 3vh 2vw 0vh 5vw;
+    align-items: center;  
+}
+
+.searchIcon{
+    grid-column: 1/2;
+}
+
+.searchIcon, .alarmIcon, .profileIcon{
+    height: 40px;
+    width: 40px;
+}
+
+.searchBar, .username{
+    width: 100%;
+}
+
+.searchBar{
+    height: 38px;
+    width: clamp(100px, 50%, 1fr);
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    grid-column: 2/3;
+}
+
+.username{
+    height: 40px;
+    display:grid;
+    align-content: center;
+    grid-column: 6/7;
+}
+
+.alarmIcon{
+    grid-column: 4/5;
+}
+
+.profileIcon{
+    grid-column: 5/6;
+}
+
+.useText{
+    padding: 0 0 0 1vw;
+}
+
+/* header Bottom */
+.bottomHeader{
+    display: grid;
+    grid-template-columns: 80px 30vw auto;
+    column-gap: 10px;
+    margin: 3vh 2vw 2vh 5vw;
+    align-items: center;  
+}
+
+.bottomHeader ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1vw;
+}
+
+.bottomHeader ul li{
+    display: grid;
+    height: 30px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.profileIconLarge{
+    height: 80px;
+    width: 80px;
+}
+
+/* sidebar */
+.icon{
+    height: 40px;
+    width: 40px;
+    border: 1px solid green;
+    margin: 0 1vw 0 1.5vw;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+.navOne ul li, .navTwo ul li{
+    font-size: clamp(8px, 2.5vw, 20px);
+    margin: 0 0 0 1.5vw;
+}
+
+.navOne ul{
+    display: grid;
+    height: 90%;
+    align-items: space-between;
+}
+
+.navTwo ul li{
+    margin: 1.5vh 0 1.5vh 1.5vw;
+}
+
