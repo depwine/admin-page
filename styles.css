@@ -72,7 +72,8 @@ body{
     z-index: 1;
 
     background-color: white;
-    box-shadow: 0 5px 10px var(--shadow);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.164);
+
 
     color: var(--text-colorDark);
     
@@ -140,9 +141,9 @@ p{
 }
 
 .searchBar{
-    height: 40px;
+    height: 38px;
     width: clamp(100px, 50%, 1fr);
-    /*border: 2px solid white;*/
+    border: 2px solid var(--colorFive);
     background-color: white;
     border-radius: 10px;
     grid-column: 2/3;
@@ -279,6 +280,10 @@ ul{
     color: var(--text-colorDark);
 }
 
+.title{
+    padding: 0 0 0.9vh 0;
+}
+
 .leftContent{
     /*border: 1px solid white;*/
 
@@ -291,7 +296,7 @@ ul{
 
     padding: 0 0 0vh 0;
 
-    margin: 1.2vh 0 1.2vh 1.1vw;
+    margin: 1.2vh 0 2vh 2vw;
 }
 
 .projectDiv{
@@ -320,6 +325,8 @@ ul{
     padding: 2vh 0 2vh 0;
 
     background-color: var(--bg-article);
+
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
 }
 
 .artHead, .artBody{
@@ -359,8 +366,8 @@ ul{
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr, calc(1fr-10%);
-    margin: 1.2vh 1.1vw 1.2vh 0;
+    grid-template-rows: 1fr, 1fr;
+    margin: 1.2vh 2vw 2vh 0;
 
 }
 
@@ -414,6 +421,9 @@ ul{
 
     background-color: var(--bg-article);
     border-radius: 10px;
+
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
+
 }
 
 hr{
@@ -438,6 +448,8 @@ hr{
 
     background-color: var(--bg-article);
     border-radius: 10px;
+
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
 }
 
 .trend{
