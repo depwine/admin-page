@@ -15,12 +15,19 @@
     --colorThree: #B7D3DF;
     --colorFour: #D6EFED; 
     --colorFive: #202044;
+    --colorSix: #20204475;
     
-
+    --font: 'Open Sans', sans-serif;
+    --font-regular: 400;
+    --font-bold: 600;
 }
 
 body{
     margin:0;
+}
+
+p{
+    font-family: var(--font);
 }
 
 /* misc */
@@ -100,7 +107,6 @@ li{
 }
 
 .side-icon{
-    border: 1px solid white;
     height: 25px;
     width: 25px;
 }
@@ -127,13 +133,18 @@ p{
     align-items: center;  
 } 
 
+.searchIcon, .alarmIcon{
+    height: clamp(30px, 2vw, 35px);
+    width: clamp(30px, 2vw, 35px);
+}
+
 .searchIcon{
     grid-column: 1/2;
 }
 
-.searchIcon, .alarmIcon, .profileIcon{
-    height: 40px;
-    width: 40px;
+.profileIcon{
+    height: clamp(45px, 2vw, 50px);
+    width: clamp(45px, 2vw, 50px);
 }
 
 .searchBar, .username{
@@ -143,9 +154,9 @@ p{
 .searchBar{
     height: 38px;
     width: clamp(100px, 50%, 1fr);
-    border: 2px solid var(--colorFive);
+    border: 2px solid var(--colorSix);
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     grid-column: 2/3;
 }
 
@@ -154,6 +165,8 @@ p{
     display: grid;
     align-content: center;
     grid-column: 6/7;
+
+    font-weight: var(--font-bold);
 }
 
 .alarmIcon{
@@ -199,15 +212,18 @@ button{
     width: 100px;
 
     border: var(--colorThree) 1px solid;
-    border-radius: 10px;
+    border-radius: 20px;
 
-    background-color: var(--colorFive);
+    
+    background-color: var(--colorFive);    
     color: white;
 
-    font-weight: bolder;
+    font-weight: var(--font-bold);
     font-size: 18px;
 
+    /*
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.164);
+    */
 }
 
 .profileIconLarge{
@@ -238,7 +254,7 @@ button{
 
 /* sidebar */
 .icon{
-    border: 1px solid white;
+    border: 2px solid white;
     height: 40px;
     width: 40px;
     margin: 0 1vw 0 1.5vw;
@@ -271,17 +287,24 @@ ul{
 }
 
 .textHead{
-    margin: 0 0 2vh 0;
+    margin: 0 0 1vh 0;
 
-    font-weight: bold;
-    font-size: clamp(20px, 2vw, 30px);
+    font-weight: var(--font-bold);
+    font-size: clamp(18px, 1.5vw, 25px);
 
-    font-family: var(--font);
     color: var(--text-colorDark);
 }
 
 .title{
     padding: 0 0 0.9vh 0;
+    font-size: clamp(15px, 1vw, 18px);
+    font-weight: var(--font-bold);
+}
+
+.content{
+    font-size: clamp(12px, 0.7vw, 14px);
+    color: var(--text-colorMiddle);
+
 }
 
 .leftContent{
@@ -320,7 +343,7 @@ ul{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 1fr;
 
-    /*border: 1px solid red;*/
+    border-left: 8px solid var(--colorOne);
     border-radius: 10px;
     padding: 2vh 0 2vh 0;
 
@@ -330,11 +353,16 @@ ul{
 }
 
 .artHead, .artBody{
-    margin: 1vh 2vw 0 1vw;
+    margin: 0.4vh 2vw 0 1vw;
+}
+
+.artHead{
+    font-weight: var(--font-bold);
 }
 
 .artBody{
-    padding: 1vh 0 0 0;
+    padding: 0.5vh 0 0 0;
+    color: var(--text-colorMiddle);
 }
 
 .artIcons{
@@ -344,7 +372,7 @@ ul{
     column-gap: 1vw;
     justify-content: end;
     align-items: center;
-    padding: 0 1vw 1vh 0;
+    padding: 0 1vw 0.5vh 0;
 }
 
 .artIcons > :nth-child(1){
@@ -353,7 +381,7 @@ ul{
 
 .news{
     /*border: 1px solid blue;*/
-    margin: 5px 3px 5px 3px;
+    margin: 5px 3px 5px 0px;
     padding: 0 0 5px 10px;
 }
 /* right top*/
@@ -417,7 +445,8 @@ ul{
 
     padding: 10px 10px 10px 10px;
 
-    row-gap: 2vh;
+    row-gap: 1vh;
+    font-size: clamp(15px, 1vw, 20px);
 
     background-color: var(--bg-article);
     border-radius: 10px;
@@ -435,6 +464,7 @@ hr{
 
 .trendDiv{
     height: 100%;
+
 }
 
 .trends{
@@ -456,25 +486,36 @@ hr{
     display: grid;
     grid-template-columns: 1fr 4fr;
 
+    font-size: clamp(12px, 1.5vw, 15px);
+    column-gap: clamp(15px, 1vw, 20px);
+
     align-items: center;
 
     /*border: 1px solid black;*/
-    margin: 5px 15px 0 15px;  
-    padding: 0 10px 0 10px; 
+    margin: 5px 15px 0 10px;  
+    padding: 0 10px 0 0px; 
 }
 
 .small-icon{
-    height: 15px;
-    width: 15px;
+    height: clamp(20px, 1vw, 35px);
+    width: clamp(20px, 1vw, 35px);
 }
 
 .twitterHandle{
     font-weight: bold;
     font-size: clamp(12px, 1vw, 15px);
+    color: var(--text-colorMiddle);
 }
 
 .twitterUser{
     color: var(--text-colorMiddle);
+    font-size: clamp(12px, 1vw, 15px);
+}
+
+.twit-icon{
+    height: clamp(30px, 1vw, 55px);
+    width: clamp(30px, 1vw, 55px);
+    justify-self: end;
 }
 
 
