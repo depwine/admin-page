@@ -10,7 +10,7 @@
 
     --shadow: rgba(97, 97, 97, 0.548);
 
-    --colorOne: #898AA6;
+    --colorOne: #898aa621;
     --colorTwo: #C9BBCF;
     --colorThree: #B7D3DF;
     --colorFour: #D6EFED; 
@@ -37,7 +37,7 @@ p{
     height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(180px, 250px) 1fr;
     grid-template-rows: 1fr 4fr;
 }
 
@@ -101,7 +101,7 @@ p{
 li{
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 20px;
+    column-gap: 15px;
     list-style: none;    
     align-items: center;
 }
@@ -211,7 +211,7 @@ button{
     height: 40px;
     width: 100px;
 
-    border: var(--colorThree) 1px solid;
+    border: var(--colorFive) 1px solid;
     border-radius: 20px;
 
     
@@ -222,7 +222,7 @@ button{
     font-size: 18px;
 
     /*
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.164);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.185);
     */
 }
 
@@ -315,7 +315,7 @@ ul{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 6vh 1fr;
+    grid-template-rows: 5vh 1fr;
 
     padding: 0 0 0vh 0;
 
@@ -347,7 +347,7 @@ ul{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 1fr;
 
-    border-left: 8px solid var(--colorOne);
+    border-left: 8px solid var(--colorFive);
     border-radius: 10px;
     
     padding: 1vh 0 1vh 0;
@@ -461,6 +461,7 @@ ul{
 
     background-color: var(--bg-article);
     border-radius: 10px;
+    border-left: 10px solid var(--colorOne);
 
     box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
 
@@ -485,10 +486,12 @@ hr{
 
     padding: 8px 10px 8px 10px;
 
-    row-gap: 5px;
+    row-gap: px;
 
     background-color: var(--bg-article);
     border-radius: 10px;
+
+    border-left: 10px solid var(--colorOne);
 
     box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
 }
