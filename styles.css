@@ -54,6 +54,7 @@ p{
     align-items: center;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #sidebar{
@@ -109,6 +110,8 @@ li{
 .side-icon{
     height: 25px;
     width: 25px;
+
+    cursor: pointer;
 }
 
 p{
@@ -136,6 +139,7 @@ p{
 .searchIcon, .alarmIcon{
     height: clamp(30px, 2vw, 35px);
     width: clamp(30px, 2vw, 35px);
+    cursor: pointer;
 }
 
 .searchIcon{
@@ -145,12 +149,14 @@ p{
 .profileIcon{
     height: clamp(45px, 2vw, 50px);
     width: clamp(45px, 2vw, 50px);
+
+    cursor: pointer;
 }
 
 .searchBar, .username{
     width: 100%;
 }
-
+/*
 .searchBar{
     height: 38px;
     width: clamp(100px, 50%, 1fr);
@@ -159,6 +165,18 @@ p{
     border-radius: 20px;
     grid-column: 2/3;
 }
+*/
+form > *{
+    height: 40px;
+    width: 40vw;
+    border: 2px solid var(--colorSix);
+    background-color: white;
+    border-radius: 20px;
+    grid-column: 2/3;
+    font-size: 20px;
+    padding: 0 0 0 10px;
+}
+
 
 .username{
     height: 40px;
@@ -167,6 +185,7 @@ p{
     grid-column: 6/7;
 
     font-weight: var(--font-bold);
+    cursor: pointer;
 }
 
 .alarmIcon{
@@ -226,9 +245,17 @@ button{
     */
 }
 
+button:hover{
+    border: var(--colorTwo) 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 .profileIconLarge{
     height: 80px;
     width: 80px;
+
+    cursor: pointer;
 }
 
 .bottomHeaderText{
@@ -248,9 +275,13 @@ button{
     font-size: clamp(20px, 1.5vw, 30px);    
     font-weight: bold;
     margin: 0;
+
+    cursor: pointer;
 }
 
-
+li{
+    cursor: pointer;
+}
 
 /* sidebar */
 .icon{
@@ -258,6 +289,7 @@ button{
     height: 40px;
     width: 40px;
     margin: 0 1vw 0 1.5vw;
+    cursor: pointer;
 }
 
 ul{
@@ -299,6 +331,7 @@ ul{
     padding: 0 0 0.9vh 0;
     font-size: clamp(15px, 1vw, 18px);
     font-weight: var(--font-bold);
+    cursor: pointer;
 }
 
 .content{
@@ -361,6 +394,12 @@ ul{
     background-color: var(--bg-article);
 
     box-shadow: 0 5px 5px rgba(128, 128, 128, 0.205);
+    transition: all .2s ease-in-out;
+}
+
+.article:hover{
+    box-shadow: 0 10px 10px rgba(4, 4, 63, 0.267);
+    transform: scale(1.02);
 }
 
 
@@ -394,6 +433,7 @@ ul{
 
 .artTitle{
     font-size: clamp(15px, 1vw, 20px);
+    cursor: pointer;
 }
 
 .news{
@@ -519,12 +559,15 @@ hr{
 .small-icon{
     height: clamp(20px, 1vw, 35px);
     width: clamp(20px, 1vw, 35px);
+    cursor: pointer;
 }
 
 .twitterHandle{
     font-weight: bold;
     font-size: clamp(12px, 1vw, 15px);
     color: var(--text-colorMiddle);
+
+    cursor: pointer;
 }
 
 .twitterUser{
@@ -536,6 +579,8 @@ hr{
     height: clamp(20px, 30px, 40px);
     width:  clamp(20px, 30px, 40px);
     justify-self: end;
+
+    cursor: pointer;
 }
 
 
