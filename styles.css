@@ -185,7 +185,7 @@ p{
 .bottomHeader{
     display: grid;
     grid-template-columns: 80px 1fr 340px;
-    margin: 2vh 2vw 1vh 5vw;
+    margin: 2vh 2vw 2vh 5vw;
     align-items: center;  
 }
 
@@ -330,10 +330,13 @@ ul{
     /*border: 1px solid rgb(189, 23, 23);*/
     display: grid;
 
+    /*
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr auto;
+    */
+    grid-template-columns: repeat(auto-fill, clamp(200px, 250px, 300px));
+    grid-template-rows: repeat(auto-fill, 1fr);
     
-    justify-content: end;
+    justify-content: start;
     align-items: space-between;
 
     gap: 1.2vh 1.2vh;
@@ -341,7 +344,10 @@ ul{
 }
 
 .article{
+    /*
     height: 20vh;
+    */
+    width: minmax(150px, 300px);
     display: grid;
 
     grid-template-columns: 1fr;
@@ -366,9 +372,9 @@ ul{
 .artBody{
     padding: 0 0 0 0;
     color: var(--text-colorMiddle);
-    margin: 0.5vh 2vw 0 1vw;
+    margin: 0.5vh 0.5vw 0 10px;
 
-    font-size: clamp(12px, 0.7vw, 14px);
+    font-size: clamp(12px, 0.8vw, 25px);
 
 }
 
